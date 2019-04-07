@@ -1,0 +1,37 @@
+{
+  "extends": ["stylelint-config-standard", "stylelint-prettier/recommended"],
+
+  "plugins": ["stylelint-order"],
+
+  "rules": {
+    "at-rule-no-unknown": [
+      true,
+      {
+        "ignoreAtRules": [
+          "include",
+          "mixin",
+          "extend",
+          "if",
+          "else",
+          "at-root",
+          "each"
+        ]
+      }
+    ],
+
+    "order/order": [
+      [
+        "custom-properties",
+        "dollar-variables",
+        "declarations",
+        "at-rules",
+        "rules"
+      ],
+      {
+        "unspecified": "bottom"
+      }
+    ],
+
+    "order/properties-alphabetical-order": true
+  }
+}
